@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discover Recipes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background:  url(foodbg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+}
+
+.navbar{
+    width: 1200px;
+    height: 150px;
+    margin: auto;
+    
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    width: 130px;
+    height: 130px;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    padding-top: 40px;
+    width: 400px;
+    float: left;
+
+
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-right: 526px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+ul li{
+    list-style: none;
+    margin-left: 80px;
+    margin-top: 27px;
+    font-size: 14px;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+ul li a:hover{
+    color:  #CD8E1B;
+}
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #DB9E2F;
+    margin: auto;
+    display: block;
+}
+ul li a:hover::after{
+    width: 100%;
+    transition: widt 0.3s linear;
+}
+
+.search{
+    width: 330px;
+    padding-top: 40px;
+    float: left;
+    margin-left: 270px;
+
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: white;
+    border: 1px solid #DB9E2F;
+    margin-top: 13px;
+    color: #000;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background:  #DB9E2F;
+    border: 2px solid  #DB9E2F;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.food{
+    float: center;
+    padding-top: 70px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.food-items{
+    display: grid;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    margin: 0 20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 15px 15px 0 0;
+}
+
+.details{
+    background: #fff;
+    height: 200px;
+}
+.details-sub{
+    padding-bottom: 20px;
+    padding-top: 20px; 
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+}
+.details>p{
+    color: #000;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.ing >p{
+    color: #000;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.ing2 >p{
+    color: #000;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.pro{
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 320px;
+    padding-right: 320px;
+}
+.ing{
+    padding-top: 40px;
+    background: #fff;
+    height: 230px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.ing2{
+    padding-top: 40px;
+    background: #fff;
+    height: 330px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.ing ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-right: 519px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.ing ul li{
+    list-style: none;
+    margin-left: 80px;
+    margin-top: 27px;
+    font-size: 14px;
+
+}
+
+.try{
+    padding-left: 170px;
+
+}
+
+.design{
+    padding-top: 40px;
+    padding-left: 390px;
+    padding-bottom: 200px;
+}
+.design button{
+    background-color: darkslategray;
+    color: #000;
+    font-size: 26px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 250px;
+    height: 65px;
+    border:1px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.design button:hover{
+    color: #fff;
+}
+.icons{
+    padding-right: 40px;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #fff;
+    
+
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 40px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+footer{
+    background: darkslategray;
+    height: auto;
+    width: 100%;
+    font-family: "sans-serif";
+    padding-top: 30px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer-content h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 3px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    font-size: 24px;
+    margin: 10px auto;
+    line-height: 28px;
+}
+
+.footer-bottom{
+    background: #111;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 24px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    opacity: .4;
+    font-weight: 200;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+            
+                <img src= drlogo.png class="logo">
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="home.php"><span style="color:#DB9E2F">HOME</span></a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                    <li><a href="account.php">ACCOUNT</a></li>
+                </ul>
+            </div>
+
+             <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+      
+            
+            
+            <div class="food"> 
+            <div class="food-items">
+            <img src="bananayogurtsmoothie.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Banana Yogurt Smoothie</h5>
+                </div>
+                <p>A banana smoothie with yogurt is the perfect base if you’re someone who loves a protein shake in the morning. Add the required amount of protein powder to this smoothie recipe, and it should work out pretty well. You may need to alter the amount of milk if it is too thick or too runny.</p>
+            </div>
+        </div>
+        </div>
+             
+            <div class="pro">
+            <div class="ing">
+            <p><span style="font-size:30px; font-weight: 600">Ingredients</span></p><br>
+            <p>2 medium bananas, cut into chunks</p>
+            <p>200ml (7fl oz) low-fat natural yogurt</p>
+            <p>125ml (4fl oz) semi-skimmed milk</p>
+            <p>2 tablespoons clear (runny) honey, or to taste</p>
+            <p>1/4 teaspoons ground cinnamon, or to taste</p>
+        
+            </div>
+            </div>
+
+            <div class="pro">
+            <div class="ing2">
+            <p><span style="font-size:30px; font-weight: 600">Procedures</span></p><br>
+
+            <p><span style="font-weight: 600">Procedure #1</span></p>
+            <p>Place bananas, yoghurt, milk and honey in a blender or food processor. Blend until smooth and well mixed.</p><br>
+
+            <p><span style="font-weight: 600">Procedure #2</span></p>
+            <p>Add cinnamon and blend to mix well. Pour the smoothie into glasses.</p><br>
+
+            <p><span style="font-weight: 600">Procedure #3</span></p>
+            <p> Serve, share and enjoy!</p><br>
+
+            </div>
+            </div>
+
+                <div class="design">                
+                 <a href="beverages.html"><button> < BACK </button></a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                 <a href="home.php"><button>  DONE </button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+                 <div class="footer-content">
+                    <h3>Discover Recipe</h3>
+                    <p> Cooking will never break your heart</p><br>
+
+                        <div class="icons">
+                        <a href="https://www.facebook.com/ICHIDiscoverRecipe/"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://instagram.com/discover_recipes?igshid=YmMyMTA2M2Y="><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                
+
+                        </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2022 DiscoverRecipe
+                    
+                </div>
+                                
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

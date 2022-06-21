@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background:  url(foodbg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 1300px;
+}
+
+.navbar{
+    width: 1200px;
+    height: 150px;
+    margin: auto;
+    
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    width: 130px;
+    height: 130px;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+	padding-top: 40px;
+    width: 400px;
+    float: left;
+
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-right: 500px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+ul li{
+    list-style: none;
+    margin-left: 80px;
+    margin-top: 27px;
+    font-size: 14px;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+ul li a:hover{
+    color:  #CD8E1B;
+}
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #DB9E2F;
+    margin: auto;
+    display: block;
+}
+ul li a:hover::after{
+    width: 100%;
+    transition: widt 0.3s linear;
+}
+
+.search{
+    width: 330px;
+    padding-top: 40px;
+    float: left;
+    margin-left: 270px;
+
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: white;
+    border: 1px solid #DB9E2F;
+    margin-top: 13px;
+    color: #000;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background:  #DB9E2F;
+    border: 2px solid  #DB9E2F;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.wrapper{
+
+    padding-top: 160px;
+    padding-left: 45px;
+    width: 1170px;
+    margin: auto;
+}
+.icons{
+    padding-right: 40px;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 40px;
+    padding-left: 40px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+figure {
+    align-items: center;
+    width: 32%;
+    float: left;
+    margin: 0;
+}
+.fig{
+    padding-top: 160px;
+    padding-left: 50px;
+    width: 1170px;
+    margin: auto;
+}
+
+figcaption {
+    text-align: center;
+    padding-left: 35px;
+}
+
+figcaption h2 {
+    margin: 15px 0;
+    font-family: "Lucida Calligraphy";
+    font-size: 40px;
+    padding-top: 10px;
+    background:#DB9E2F;
+    width:300px;
+    height: 60px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+figcaption h2:hover{
+    color: #fff;
+}
+
+figcaption a {
+    text-decoration: none;
+    color: #000;
+}
+
+.padding {
+    padding-left: 20px;
+
+}
+
+.hover-animation {
+    position: relative;
+    height: 350px;
+    width: 350px;
+    margin: 10% auto 0;
+    color: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.hover-animation img {
+    position: absolute;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.hover-animation img.img-front:hover{
+    opacity:0;
+    cursor: pointer;
+}
+
+footer{
+    background: darkslategray;
+    height: auto;
+    width: 100%;
+    font-family: "sans-serif";
+    padding-top: 30px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer-content h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 3px;
+}
+
+.footer-content p{
+    font-size: 24px;
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+}
+
+.footer-bottom{
+    background: #111;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 24px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    opacity: .4;
+    font-weight: 200;
+}
+

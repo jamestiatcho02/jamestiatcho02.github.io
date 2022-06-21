@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discover Recipes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background:  url(foodbg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+}
+
+.navbar{
+    width: 1200px;
+    height: 150px;
+    margin: auto;
+    
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    width: 130px;
+    height: 130px;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    padding-top: 40px;
+    width: 400px;
+    float: left;
+
+
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-right: 526px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+ul li{
+    list-style: none;
+    margin-left: 80px;
+    margin-top: 27px;
+    font-size: 14px;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+ul li a:hover{
+    color:  #CD8E1B;
+}
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #DB9E2F;
+    margin: auto;
+    display: block;
+}
+ul li a:hover::after{
+    width: 100%;
+    transition: widt 0.3s linear;
+}
+
+.search{
+    width: 330px;
+    padding-top: 40px;
+    float: left;
+    margin-left: 270px;
+
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: white;
+    border: 1px solid #DB9E2F;
+    margin-top: 13px;
+    color: #000;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background:  #DB9E2F;
+    border: 2px solid  #DB9E2F;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.food{
+    float: center;
+    padding-top: 70px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.food-items{
+    display: grid;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    margin: 0 20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 15px 15px 0 0;
+}
+
+.details{
+    background: #fff;
+    height: 200px;
+}
+.details-sub{
+    padding-bottom: 20px;
+    padding-top: 20px; 
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+}
+.details>p{
+    color: #000;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.ing >p{
+    color: #000;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.ing2 >p{
+    color: #000;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.pro{
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 320px;
+    padding-right: 320px;
+}
+.ing{
+    padding-top: 40px;
+    background: #fff;
+    height: 540px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.ing2{
+    padding-top: 40px;
+    background: #fff;
+    height: 680px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.ing ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-right: 519px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.ing ul li{
+    list-style: none;
+    margin-left: 80px;
+    margin-top: 27px;
+    font-size: 14px;
+
+}
+
+.try{
+    padding-left: 170px;
+
+}
+
+.design{
+    padding-top: 40px;
+    padding-left: 390px;
+    padding-bottom: 200px;
+}
+.design button{
+    background-color: darkslategray;
+    color: #000;
+    font-size: 26px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 250px;
+    height: 65px;
+    border:1px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.design button:hover{
+    color: #fff;
+}
+.icons{
+    padding-right: 40px;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #fff;
+    
+
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 40px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+footer{
+    background: darkslategray;
+    height: auto;
+    width: 100%;
+    font-family: "sans-serif";
+    padding-top: 30px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer-content h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 3px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    font-size: 24px;
+    margin: 10px auto;
+    line-height: 28px;
+}
+
+.footer-bottom{
+    background: #111;
+    width:100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 24px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    opacity: .4;
+    font-weight: 200;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+            
+                <img src= drlogo.png class="logo">
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="home.php"><span style="color:#DB9E2F">HOME</span></a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                    <li><a href="account.php">ACCOUNT</a></li>
+                </ul>
+            </div>
+
+             <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+      
+            
+            
+            <div class="food"> 
+            <div class="food-items">
+            <img src="breakfastburrito.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Breakfast Burrito</h5>
+                </div>
+                <p> Bodega-style breakfast burritos filled with spicy sausage, smoky scrambled eggs, cheese, and a bright, fresh avocado-tomato salsa.</p>
+            </div>
+        </div>
+        </div>
+             
+            <div class="pro">
+            <div class="ing">
+            <p><span style="font-size:40px; font-weight: 600">Ingredients</span></p><br>
+            <p>1 large avocado, peeled, pitted, and diced</p>
+            <p>½ cup diced seeded tomatoes, from 1 to 2 tomatoes</p>
+            <p>1 small shallot, minced (about 2 tablespoons)</p>
+            <p>1 clove garlic, minced</p>
+            <p>1 jalapeño pepper, seeded and minced</p>
+            <p>1 tablespoon fresh lime juice, from 1 lime</p>
+            <p>½ teaspoon salt</p>
+            <p>¼ teaspoon ground cumin</p>
+            <p>¼ cup fresh chopped cilantro</p>
+            <p>4 large eggs</p>
+            <p>¼ teaspoon smoked paprika</p>
+            <p>¼ teaspoon salt</p>
+            <p>½ lb spicy sausage (such as chorizo, Italian, or anything you like), removed from casings</p>
+            <p>1⅓ cups (6 oz) shredded Monterey Jack cheese</p>
+            <p>4 (10-in) burrito-size flour tortillas</p>
+            <p>Vegetable oil</p>
+            </div>
+            </div>
+
+            <div class="pro">
+            <div class="ing2">
+            <p><span style="font-size:40px; font-weight: 600">Procedures</span></p><br>
+            <p><span style="font-weight: 600">Procedure #1</span></p>
+            <p>Make the Avocado-Tomato Salsa: Place all of the ingredients in a medium bowl and mix to combine. Set aside.</p><br>
+            <p><span style="font-weight: 600">Procedure #2</span></p>
+            <p>In a medium bowl, whisk the eggs with the smoked paprika and salt. Set aside.</p><br>
+            <p><span style="font-weight: 600">Procedure #3</span></p>
+            <p>Heat a large nonstick pan over medium-high heat. Add the sausage and cook, stirring frequently, until browned, 4 to 5 minutes. Use a slotted spoon to transfer the sausage from the pan to a plate, leaving the drippings in the pan. Reduce the heat to low. Add the eggs and scramble until just cooked through. Transfer the eggs to a plate. Clean the pan (you'll use it again).</p><br>
+            <p><span style="font-weight: 600">Procedure #4</span></p>
+            <p>Assemble the burritos: Spoon about ¼ cup of the avocado-salsa onto each tortilla (you'll have a little leftover salsa; that's for the cook!), followed by a quarter of the sausage, a quarter of the eggs, and ⅓ cup cheese. Fold in the sides of the tortilla over the filling and roll, tucking in the edges as you go.</p><br>
+            <p><span style="font-weight: 600">Procedure #5</span></p>
+            <p>Lightly coat the pan with oil and set over medium heat. When the pan is hot, add the burritos, seam side down. Cook, covered, until the bottom of the burritos are golden brown, about 3 minutes. Flip the burritos over and continue cooking, covered, until golden, a few minutes more. Serve warm.</p><br>
+          
+            </div>
+            </div>
+
+                <div class="design">                
+                 <a href="breakfast.html"><button> < BACK </button></a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
+                 <a href="home.php"><button>  DONE </button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+                 <div class="footer-content">
+                    <h3>Discover Recipe</h3>
+                    <p> Cooking will never break your heart</p><br>
+
+                        <div class="icons">
+                        <a href="https://www.facebook.com/ICHIDiscoverRecipe/"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://instagram.com/discover_recipes?igshid=YmMyMTA2M2Y="><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                
+
+                        </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2022 DiscoverRecipe
+                    
+                </div>
+                                
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>
